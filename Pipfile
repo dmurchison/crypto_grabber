@@ -10,6 +10,8 @@ pydantic = "*"
 pandas = "*"
 requests = "*"
 pymongo = "*"
+jinja2 = "*"
+asyncio = "*"
 
 [dev-packages]
 

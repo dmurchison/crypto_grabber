@@ -1,10 +1,12 @@
 import uvicorn
+import requests
 from fastapi import FastAPI
 from pydantic import BaseModel
-import requests
+
 
 
 app = FastAPI(title="Crypto API", version="1.0.0", description="A simple API to get crypto data")
+
 
 class CryptoData(BaseModel):
     symbol: str
@@ -12,7 +14,8 @@ class CryptoData(BaseModel):
 
 @app.get("/")
 def index():
-    return {"message": "Welcome to the Crypto API, visit /docs for more info"}
+    return {"message": "Welcome to the Crypto API"}
+
 
 @app.get("/crypto/{symbol}")
 async def crypto_info(symbol: str):
