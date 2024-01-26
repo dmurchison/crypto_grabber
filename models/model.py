@@ -1,5 +1,7 @@
-from pydantic import BaseModel
+from typing import List, Optional
+import uuid
+from pydantic import BaseModel, Field
+
 
 class CryptoData(BaseModel):
-    symbol: str
-
+    coin_id: str
