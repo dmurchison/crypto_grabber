@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:alpine
 
 RUN pip install pipenv
 RUN mkdir -p /usr/src/app/
